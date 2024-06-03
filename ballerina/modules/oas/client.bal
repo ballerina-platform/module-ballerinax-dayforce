@@ -67,7 +67,6 @@ public isolated client class Client {
     #
     # + jobId - To get background job processed data for employee export.
     # + clientNamespace - Uniquely identifies the client's Dayforce instance. Is needed to login.
-    # + pagination - The pagination information to be used for the request if there is any.
     # + return - Returns a page of employee data, `nil` if the given paginated data does not have a url(marking the end of the pages) or else an error if the request fails.
     resource isolated function get [string clientNamespace]/v1/GetEmployeeBulkAPI/Data/[string jobId]() returns PaginatedPayload_IEnumerable_Employee|error? {
         string resourcePath = string `/${getEncodedUri(clientNamespace)}/v1/GetEmployeeBulkAPI/Data/${getEncodedUri(jobId)}`;

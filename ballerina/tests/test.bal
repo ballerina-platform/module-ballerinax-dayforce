@@ -15,7 +15,6 @@
 // under the License.
 
 import ballerina/test;
-import ballerina/io;
 
 @test:Config {}
 isolated function testGetEmployee() returns error? {
