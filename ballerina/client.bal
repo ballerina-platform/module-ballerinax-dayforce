@@ -79,17 +79,17 @@ public isolated client class Client {
     # + pagination - The pagination information to be used for the request if there is any.
     # + return - Returns a page of employee data, `nil` if the given paginated data does not have a url(marking the end of the pages) or else an error if the request fails.
     resource isolated function get [string clientNamespace]/v1/GetEmployeeBulkAPI/Data/[string jobId](Paging? pagination = ()) returns PaginatedPayload_IEnumerable_Employee|error? {
+        string:RegExp re = re `${self.serviceUrl}`;
         if pagination !is () {
             if pagination.Next is () || pagination.Next == "" {
                 return ();
             }
-            string[] result = regex:split(<string>pagination.Next, "(?i)/api/");
-            string resourcePath = string `/${result[1]}`;
+            string[] result = re.split(<string>pagination.Next);
+            string resourcePath = string `${result[1]}`;
             PaginatedPayload_IEnumerable_Employee response = check self.paginatedClient->get(resourcePath);
             return response;
-        } else {
-            return self.genClient->/[clientNamespace]/v1/GetEmployeeBulkAPI/Data/[jobId].get();
         }
+        return self.genClient->/[clientNamespace]/v1/GetEmployeeBulkAPI/Data/[jobId].get();
     }
     # Get Reports
     #
