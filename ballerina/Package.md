@@ -33,13 +33,13 @@ Instantiate a new `dayforce:Client` giving the auth details.
 
 ```ballerina
 dayforce:Client dayforce = check new (
-        {
-            auth: { 
-                username: "<username>", 
-                password: "<password>"
-            }
-        }, 
-        "https://www.dayforcehcm.com/Api/ddn/V1/");
+    {
+        auth: { 
+            username: "<username>", 
+            password: "<password>"
+        }
+    }, 
+    "https://www.dayforcehcm.com/Api/ddn/V1/");
 ```
 
 ### Step 3: Invoke the connector operation

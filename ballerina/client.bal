@@ -15,12 +15,12 @@
 // under the License.
 
 import ballerina/http;
-import ballerina/regex;
 import dayforce.oas;
 
 public isolated client class Client {
     final oas:Client genClient;
     final http:Client paginatedClient;
+    final string serviceUrl;
     # Gets invoked to initialize the `connector`.
     #
     # + config - The configurations to be used when initializing the `connector` 
@@ -53,6 +53,7 @@ public isolated client class Client {
         oas:Client genClient = check new oas:Client(config, serviceUrl);
         self.genClient = genClient;
         self.paginatedClient = httpEp;
+        self.serviceUrl = serviceUrl;
         return;
     }
     # Add new HR Bulk Export details into Job Queue tables.
