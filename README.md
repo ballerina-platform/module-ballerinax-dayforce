@@ -10,7 +10,9 @@
 
 Dayforce is a comprehensive human capital management system that covers the entire employee lifecycle including HR, payroll, benefits, talent management, workforce management, and services. The entire system resides on cloud that takes the burden of managing and replicating data on-premise.
 
-The Dayforce connector allows you to access the REST API of Dayforce HCM.
+The Dayforce connector allows you to access the REST API of Dayforce HCM. 
+
+This connector has been tested exclusively in the Dayforce developer sample environment. If you encounter any technical issues, please reach out to us using the links provided in the [Useful Links](#useful-links) section.
 
 ## Setup guide
 
@@ -140,7 +142,7 @@ For more information, go to the [contribution guidelines](https://github.com/bal
 
 All the contributors are encouraged to read the [Ballerina Code of Conduct](https://ballerina.io/code-of-conduct).
 
-## Useful links
+## [Useful links](#useful-links)
 
 * For more information go to the [`dayforce` package](https://lib.ballerina.io/ballerinax/dayforce/latest).
 * For example demonstrations of the usage, go to [Ballerina By Examples](https://ballerina.io/learn/by-example/).

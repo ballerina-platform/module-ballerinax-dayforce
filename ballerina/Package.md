@@ -4,6 +4,8 @@ Dayforce is a comprehensive human capital management system that covers the enti
 
 The Dayforce connector allows you to access the REST API of Dayforce HCM.
 
+This connector has been tested exclusively in the Dayforce developer sample environment. If you encounter any technical issues, please reach out to us using the links provided in the [Useful Links](#useful-links) section.
+
 ## Setup guide
 
 ### Step 1: Create a Dayforce account
@@ -64,7 +66,7 @@ bal run
 
 To report bugs, request new features, start new discussions, view project boards, etc., go to the [Ballerina library parent repository](https://github.com/ballerina-platform/ballerina-library).
 
-## Useful Links
+## [Useful links](#useful-links)
 
 - Chat live with us via our [Discord server](https://discord.gg/ballerinalang).
 - Post all technical questions on Stack Overflow with the [#ballerina](https://stackoverflow.com/questions/tagged/ballerina) tag.

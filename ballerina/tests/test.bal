@@ -20,4 +20,5 @@ import ballerina/test;
 isolated function testGetEmployee() returns error? {
     Client testClient = check new({auth: {username: "DFWSTest", password: "DFWSTest"}}, "https://ustest241-services.dayforcehcm.com/Api");
     Payload_Employee employee = check testClient->/ddn/V1/Employees/'42199;
+    test:assertEquals(employee?.Data?.EmployeeNumber, "42199");
 }

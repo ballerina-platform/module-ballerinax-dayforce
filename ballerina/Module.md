@@ -4,6 +4,8 @@ Dayforce is a comprehensive human capital management system that covers the enti
 
 The Dayforce connector allows you to access the REST API of Dayforce HCM.
 
+This connector has been tested exclusively in the Dayforce developer sample environment. If you encounter any technical issues, please reach out to us using the links provided in the [Useful Links](#useful-links) section.
+
 ## Setup guide
 
 ### Step 1: Create a Dayforce account
@@ -59,3 +61,8 @@ Use the following command to compile and run the Ballerina program.
 ```bash
 bal run
 ```
+
+## [Useful links](#useful-links)
+
+- Chat live with us via our [Discord server](https://discord.gg/ballerinalang).
+- Post all technical questions on Stack Overflow with the [#ballerina](https://stackoverflow.com/questions/tagged/ballerina) tag.

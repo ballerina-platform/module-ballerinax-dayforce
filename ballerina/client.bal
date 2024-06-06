@@ -28,26 +28,24 @@ public isolated client class Client {
     # + return - An error if connector initialization failed 
     public isolated function init(ConnectionConfig config, string serviceUrl = "https://ustest241-services.dayforcehcm.com/Api") returns error? {
         http:ClientConfiguration httpClientConfig = {auth: config.auth, httpVersion: config.httpVersion, timeout: config.timeout, forwarded: config.forwarded, poolConfig: config.poolConfig, compression: config.compression, circuitBreaker: config.circuitBreaker, retryConfig: config.retryConfig, validation: config.validation};
-        do {
-            if config.http1Settings is ClientHttp1Settings {
-                ClientHttp1Settings settings = check config.http1Settings.ensureType(ClientHttp1Settings);
-                httpClientConfig.http1Settings = {...settings};
-            }
-            if config.http2Settings is http:ClientHttp2Settings {
-                httpClientConfig.http2Settings = check config.http2Settings.ensureType(http:ClientHttp2Settings);
-            }
-            if config.cache is http:CacheConfig {
-                httpClientConfig.cache = check config.cache.ensureType(http:CacheConfig);
-            }
-            if config.responseLimits is http:ResponseLimitConfigs {
-                httpClientConfig.responseLimits = check config.responseLimits.ensureType(http:ResponseLimitConfigs);
-            }
-            if config.secureSocket is http:ClientSecureSocket {
-                httpClientConfig.secureSocket = check config.secureSocket.ensureType(http:ClientSecureSocket);
-            }
-            if config.proxy is http:ProxyConfig {
-                httpClientConfig.proxy = check config.proxy.ensureType(http:ProxyConfig);
-            }
+        if config.http1Settings is ClientHttp1Settings {
+            ClientHttp1Settings settings = check config.http1Settings.ensureType();
+            httpClientConfig.http1Settings = {...settings};
+        }
+        if config.http2Settings is http:ClientHttp2Settings {
+            httpClientConfig.http2Settings = check config.http2Settings.ensureType();
+        }
+        if config.cache is http:CacheConfig {
+            httpClientConfig.cache = check config.cache.ensureType();
+        }
+        if config.responseLimits is http:ResponseLimitConfigs {
+            httpClientConfig.responseLimits = check config.responseLimits.ensureType();
+        }
+        if config.secureSocket is http:ClientSecureSocket {
+            httpClientConfig.secureSocket = check config.secureSocket.ensureType();
+        }
+        if config.proxy is http:ProxyConfig {
+            httpClientConfig.proxy = check config.proxy.ensureType();
         }
         http:Client httpEp = check new (serviceUrl, httpClientConfig);
         oas:Client genClient = check new oas:Client(config, serviceUrl);
@@ -74,10 +72,15 @@ public isolated client class Client {
         return self.genClient->/[clientNamespace]/v1/GetEmployeeBulkAPI/Status/[backgroundJobQueueItemId].get();
     }
     # Get bulk employee of data as a string in json format
-    #
+    # ```ballerina
+    # PaginatedPayload_IEnumerable_Employee? employeeDetails = check dayforce->/[NAMESPACE]/v1/GetEmployeeBulkAPI/Data/["12810"];
+    # if employees is PaginatedPayload_IEnumerable_Employee {
+    #    employeeDetails = check dayforce->/[NAMESPACE]/v1/GetEmployeeBulkAPI/Data/["12810"](employeeDetails.Paging);
+    # }
+    #```
     # + jobId - To get background job processed data for employee export.
     # + clientNamespace - Uniquely identifies the client's Dayforce instance. Is needed to login.
-    # + pagination - The pagination information to be used for the request if there is any.
+    # + pagination - The pagination information to be used for the request if there is any. You can obtain the Paging record from the initial request's response.
     # + return - Returns a page of employee data, `nil` if the given paginated data does not have a url(marking the end of the pages) or else an error if the request fails.
     resource isolated function get [string clientNamespace]/v1/GetEmployeeBulkAPI/Data/[string jobId](Paging? pagination = ()) returns PaginatedPayload_IEnumerable_Employee|error? {
         string:RegExp re = re `${self.serviceUrl}`;
