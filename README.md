@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/ballerina-platform/module-ballerinax-dayforce/workflows/CI/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-dayforce/actions?query=workflow%3ACI)
 [![codecov](https://codecov.io/gh/ballerina-platform/module-ballerinax-dayforce/branch/main/graph/badge.svg)](https://codecov.io/gh/ballerina-platform/module-ballerinax-dayforce)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/ballerina-platform/module-ballerinax-dayforce.svg)](https://github.com/ballerina-platform/module-ballerinax-dayforce./commits/master)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/ballerina-platform/module-ballerinax-dayforce.svg)](https://github.com/ballerina-platform/module-ballerinax-dayforce./commits/main)
 [![GraalVM Check](https://github.com/ballerina-platform/module-ballerinax-dayforce/actions/workflows/build-with-bal-test-native.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-dayforce/actions/workflows/build-with-bal-test-native.yml)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -10,21 +10,40 @@
 
 Dayforce is a comprehensive human capital management system that covers the entire employee lifecycle including HR, payroll, benefits, talent management, workforce management, and services. The entire system resides on cloud that takes the burden of managing and replicating data on-premise.
 
-The Dayforce connector allows you to access the REST API of Dayforce HCM. 
+The Dayforce connector allows you to access the REST API of Dayforce HCM specifically based on Rest API version v1. 
 
-This connector has been tested exclusively in the Dayforce developer sample environment. If you encounter any technical issues, please reach out to us using the links provided in the [Useful Links](#useful-links) section.
+This connector has been tested exclusively in the Dayforce developer sample environment. If you encounter any technical issues, please reach out to us using the links provided in the [Useful links](#useful-links) section.
 
 ## Setup guide
 
 ### Step 1: Create a Dayforce account
 
-Navigate to the [Dayforce](https://developers.dayforce.com/Build/Home.aspx) website and register. Follow the instructions to create an account. If your company has already purchased a namespace in Dayforce, use that to sign up. Otherwise, you can still use their `sample` environment by selecting `sample` option.
+1. Navigate to the [Dayforce](https://developers.dayforce.com/Build/Home.aspx) website and register. Follow the instructions to create an account. If your company has already purchased a namespace in Dayforce, use that to sign up. Otherwise, you can still use their `sample` environment by selecting `sample` option.
+
+   <img src=https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-dayforce/main/docs/setup/resources/signing.png alt="Register for Dayforce" width="50%">
+
+2. Once you have registered, you will receive an email with a link to activate your account. 
+
+   <img src=https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-dayforce/main/docs/setup/resources/email.png alt="Registration email for Dayforce" width="50%">
+
+3. Click on the link sent in the email to complete the registration process.
+
+   <img src=https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-dayforce/main/docs/setup/resources/confirm-registration.png alt="Confirm registration" width="50%">
+
+4. After confirming your registration, you'll get a success message. Click on the "Sign In" button to log in to your account.
+
+   <img src=https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-dayforce/main/docs/setup/resources/registration-complete.png alt="Registration complete" width="50%">
+
+5. Enter your email address and password to log in.
+
+   <img src=https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-dayforce/main/docs/setup/resources/sign-in.png alt="Sign in to Dayforce" width="50%">
 
 ### Step 2: Obtain the user credentials to access the Dayforce API
 
 To get the credentials for the `sample` environment, follow the instructions below:
-1. Navigate to API Explorer > Employee > GET Employees.
+1. Navigate to API Explorer -> Employee -> GET Employees.
 2. Locate the basic authentication credentials, including the `username` and `password`, for the sample environment.
+   <img src=https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-dayforce/main/docs/setup/resources/auth-tokens.png alt="Obtain auth tokens" width="50%">
 
 ## Quickstart
 
@@ -57,7 +76,6 @@ dayforce:Client dayforce = check new (
 Now, utilize the available connector operations.
 ```ballerina
 public function main() returns error? {
-    dayforce:Client dayforce = ...//
     dayforce:Payload_Employee employee = check dayforce->/ddn/V1/Employees/'42199;
 }
 ```
@@ -136,7 +154,7 @@ Execute the commands below to build from the source.
 
 As an open-source project, Ballerina welcomes contributions from the community.
 
-For more information, go to the [contribution guidelines](https://github.com/ballerina-platform/ballerina-lang/blob/master/CONTRIBUTING.md).
+For more information, go to the [contribution guidelines](https://github.com/ballerina-platform/ballerina-lang/blob/main/CONTRIBUTING.md).
 
 ## Code of conduct
 
