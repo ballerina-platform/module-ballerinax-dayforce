@@ -3,7 +3,7 @@
 [![Build Status](https://github.com/ballerina-platform/module-ballerinax-dayforce/workflows/CI/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-dayforce/actions?query=workflow%3ACI)
 [![codecov](https://codecov.io/gh/ballerina-platform/module-ballerinax-dayforce/branch/main/graph/badge.svg)](https://codecov.io/gh/ballerina-platform/module-ballerinax-dayforce)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/ballerina-platform/module-ballerinax-dayforce.svg)](https://github.com/ballerina-platform/module-ballerinax-dayforce./commits/main)
-[![GraalVM Check](https://github.com/ballerina-platform/module-ballerinax-dayforce/actions/workflows/build-with-bal-test-native.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-dayforce/actions/workflows/build-with-bal-test-native.yml)
+[![GraalVM Check](https://github.com/ballerina-platform/module-ballerinax-dayforce/actions/workflows/build-with-bal-test-graalvm.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-dayforce/actions/workflows/build-with-bal-test-graalvm.yml)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Overview
