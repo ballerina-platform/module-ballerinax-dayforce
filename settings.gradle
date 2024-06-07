@@ -33,10 +33,10 @@ plugins {
 rootProject.name = 'module-ballerinax-dayforce'
 
 include ':dayforce-ballerina'
-include ':dayforce-examples'
+//include ':dayforce-examples'
 
 project(':dayforce-ballerina').projectDir = file("ballerina")
-project(':dayforce-examples').projectDir = file("examples")
+//project(':dayforce-examples').projectDir = file("examples")
 
 gradleEnterprise {
     buildScan {
