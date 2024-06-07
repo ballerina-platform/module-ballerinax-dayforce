@@ -6,7 +6,7 @@ version = "@toml.version@"
 authors = ["Ballerina"]
 repository = "https://github.com/ballerina-platform/module-ballerinax-dayforce"
 keywords = ["HCM", "Workforce Management", "HRIS"]
-#icon = "icon.png"
+icon = "icon.png"
 license = ["Apache-2.0"]
 
 [build-options]
