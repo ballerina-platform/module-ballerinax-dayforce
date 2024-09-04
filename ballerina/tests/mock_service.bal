@@ -23,10 +23,9 @@ http:Service mockService = service object {
 
     isolated resource function get [string clientNamespace]/V1/Employees/[string xRefCode](string? contextDate = (), string? expand = (), string? contextDateRangeFrom = (), string? contextDateRangeTo = (), string? amfEntity = (), string? amfLevel = (), string? amfLevelValue = ()) returns Payload_Employee|error {
         return {
-            "employeeId": "42199",
-            "employeeName": "John Doe",
-            "employeeAge": 30,
-            "employeeSalary": 1000.0
+            Data: {
+                EmployeeNumber: xRefCode
+            }
         };
     }
 };
