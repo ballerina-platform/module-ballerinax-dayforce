@@ -14,11 +14,25 @@
 // specific language governing permissions and limitations
 // under the License.
 
+import ballerina/os;
 import ballerina/test;
 
+configurable boolean isLiveServer = os:getEnv("IS_LIVE_SERVER") == "true";
+configurable string username = isLiveServer ? os:getEnv("USERNAME") : "test";
+configurable string password = isLiveServer ? os:getEnv("PASSWORD") : "test";
+configurable string serviceUrl = isLiveServer ? "https://ustest241-services.dayforcehcm.com/Api" : "http://localhost:9090";
+
+ConnectionConfig config = {
+    auth: {
+        username,
+        password
+    }
+};
+
+Client dayforce = check new (config, serviceUrl);
+
 @test:Config {}
-isolated function testGetEmployee() returns error? {
-    Client testClient = check new({auth: {username: "DFWSTest", password: "DFWSTest"}}, "https://ustest241-services.dayforcehcm.com/Api");
-    Payload_Employee employee = check testClient->/ddn/V1/Employees/'42199;
+function testGetEmployee() returns error? {
+    Payload_Employee employee = check dayforce->/ddn/V1/Employees/'42199;
     test:assertEquals(employee?.Data?.EmployeeNumber, "42199");
 }

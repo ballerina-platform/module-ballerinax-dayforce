@@ -2,7 +2,7 @@
 distribution = "2201.8.0"
 org = "ballerinax"
 name = "dayforce"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Ballerina"]
 repository = "https://github.com/ballerina-platform/module-ballerinax-dayforce"
 keywords = ["HCM", "Workforce Management", "HRIS"]
