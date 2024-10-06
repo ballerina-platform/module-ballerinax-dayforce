@@ -80,7 +80,7 @@ Use the following command to compile and run the Ballerina program.
 bal run
 ```
 
-## [Useful links](#useful-links)
+## Useful links
 
 - Chat live with us via our [Discord server](https://discord.gg/ballerinalang).
 - Post all technical questions on Stack Overflow with the [#ballerina](https://stackoverflow.com/questions/tagged/ballerina) tag.

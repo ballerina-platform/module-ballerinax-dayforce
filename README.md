@@ -160,7 +160,7 @@ For more information, go to the [contribution guidelines](https://github.com/bal
 
 All the contributors are encouraged to read the [Ballerina Code of Conduct](https://ballerina.io/code-of-conduct).
 
-## [Useful links](#useful-links)
+## Useful links
 
 * For more information go to the [`dayforce` package](https://lib.ballerina.io/ballerinax/dayforce/latest).
 * For example demonstrations of the usage, go to [Ballerina By Examples](https://ballerina.io/learn/by-example/).
