@@ -1,4 +1,4 @@
-## Package Overview
+## Overview
 
 Dayforce is a comprehensive human capital management system that covers the entire employee lifecycle including HR, payroll, benefits, talent management, workforce management, and services. The entire system resides on cloud that takes the burden of managing and replicating data on-premise.
 
@@ -36,6 +36,7 @@ To get the credentials for the `sample` environment, follow the instructions bel
 1. Navigate to API Explorer -> Employee -> GET Employees.
 2. Locate the basic authentication credentials, including the `username` and `password`, for the sample environment.
    <img src=https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-dayforce/main/docs/setup/resources/auth-tokens.png alt="Obtain auth tokens" width="50%">
+
 ## Quickstart
 
 To use the `dayforce` connector in your Ballerina project, modify the `.bal` file as follows:
@@ -78,10 +79,6 @@ Use the following command to compile and run the Ballerina program.
 ```bash
 bal run
 ```
-
-## Report Issues
-
-To report bugs, request new features, start new discussions, view project boards, etc., go to the [Ballerina library parent repository](https://github.com/ballerina-platform/ballerina-library).
 
 ## Useful links
 
