@@ -4,7 +4,12 @@ Dayforce is a comprehensive human capital management system that covers the enti
 
 The Dayforce connector allows you to access the REST API of Dayforce HCM specifically based on Rest API version v1.
 
-This connector has been tested exclusively in the Dayforce developer sample environment. If you encounter any technical issues, please reach out to us using the links provided in the [Useful links](#useful-links) section.
+### Key Features
+
+- Comprehensive HCM system covering the entire employee lifecycle
+- Access to HR, payroll, benefits, and talent management
+- Cloud-based management and data replication
+- Support for Dayforce REST API version v1
 
 ## Setup guide
 
