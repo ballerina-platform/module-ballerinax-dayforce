@@ -1,5 +1,7 @@
 ## Overview
 
+Dayforce is a comprehensive human capital management system that covers the entire employee lifecycle including HR, payroll, benefits, talent management, workforce management, and services. The entire system resides on cloud that takes the burden of managing and replicating data on-premise.
+
 The Dayforce connector allows you to access the REST API of Dayforce HCM specifically based on Rest API version v1.
 
 ### Key Features
