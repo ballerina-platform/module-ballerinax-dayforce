@@ -6,10 +6,10 @@ The Dayforce connector allows you to access the REST API of Dayforce HCM specifi
 
 ### Key Features
 
-- Access Dayforce HCM REST API
-- Manage employee lifecycle data
-- Support for HR, payroll, and benefits data
-- Compatible with Dayforce REST API version v1
+- Comprehensive HCM system covering the entire employee lifecycle
+- Access to HR, payroll, benefits, and talent management
+- Cloud-based management and data replication
+- Support for Dayforce REST API version v1
 
 ## Setup guide
 
